@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../media/tap-icon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="../media/tap-icon.svg" />
+  <link rel="apple-touch-icon" href="../media/tap-icon.svg" />
+  <meta name="color-scheme" content="light only">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../js/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../scss/style.css">
+  <title>Trial</title>
+</head>
+
+<body>
+  <!-- Start Nav -->
+  <nav class="nav2">
+    <div class="box2 f-s">
+      <div class="links">
+        <div class="ls">
+          <ul class="mainLinks">
+            <li><a class="link" href="../index.html">Home</a></li>
+            <li><a class="link" href="./about.html"> About us </a></li>
+            <li><a class="link active" href="./contact.html"> Contact us </a></li>
+            <li class="drop"><a class="link" href="##">
+                More <i class="fa-solid fa-play drop-icon"></i></a>
+              <span class="dropMenu">
+                <a href="./adventures.html"> Our adventures </a>
+                <a href="./team.html"> Our team </a>
+                <a href="./story.html"> Our Story </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="../index.html" class="logo">
+        <img src="../media/logo.png" alt="">
+      </a>
+      <div class="last">
+        <div class="mLinks">
+          <div class="media">
+            <div class="icons">
+              <a href="##"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="##"><i class="fa-brands fa-instagram"></i></a>
+              <a href="##"><i class="fa-brands fa-twitter"></i></a>
+              <a href="##"> <i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <a class="a" href="##">Join Now</a>
+          </div>
+        </div>
+        <div class="lsss">
+          <button class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Nav -->
+
+
+  <!-- Start Contact -->
+  <div class="center pb120">
+    <div class="box contactForm">
+      <h1>Plan Your Trip</h1>
+      <p class="sw">we’re excited to have you in Jordan</p>
+      <form action="">
+        <div class="input">
+          <span>Name</span>
+          <input type="text" placeholder="Name" spellcheck="false">
+        </div>
+        <div class="input">
+          <span>Email</span>
+          <input type="email" placeholder="Email" spellcheck="false">
+        </div>
+        <div class="input">
+          <span>Phone Number</span>
+          <input type="number" placeholder="Phone Number" spellcheck="false">
+        </div>
+        <div class="input">
+          <span>Date of arrival</span>
+          <div class="datepicker">
+            <input class="input-field" type="text" id="datepickerInput" placeholder="Date of arrival"
+              onchange="checkDate(this)" onMouseDown="toggleCalendar();" onMouseDown="toggleCalendar();"
+              onkeyup="value=value.replace(/[^0-9\-]/g,'')" inputmode="numeric" minlength="8" maxlength="10">
+          </div>
+          <div class="d-none" id="calendar_date">
+            <div class="title">
+              <button type="button" class="arrow-control" onclick="preMonth();"><i
+                  class="fas fa-chevron-left"></i></button>
+              <h4 id="year-month" class="year-month" onclick="showMonth();"></h4>
+              <button type="button" class="arrow-control" onclick="nextMonth();"><i
+                  class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="week" id="week"></div>
+            <div class="list" id="list"></div>
+          </div>
+          <div class="d-none" id="calendar_month">
+            <div class="title">
+              <button class="arrow-control" onclick="preYear();"><i class="fas fa-chevron-left"></i></button>
+              <h4 id="year" class="year" onclick="showYear();"></h4>
+              <button class="arrow-control" onclick="nextYear();"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="list" id="monlist"></div>
+          </div>
+          <div class="d-none" id="calendar_year">
+            <div class="title">
+              <button class="arrow-control" onclick="preYears();"><i class="fas fa-chevron-left"></i></button>
+              <h4 id="years" class="year"></h4>
+              <button class="arrow-control" onclick="nextYears();"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="list" id="yearlist"></div>
+          </div>
+        </div>
+        <div class="input">
+          <span>Date of departure</span>
+          <div class="datepicker">
+            <input class="input-field" type="text" id="datepickerInput2" placeholder="Date of departure"
+              onchange="checkDate2(this)" onMouseDown="toggleCalendar2();" onMouseDown="toggleCalendar2();"
+              onkeyup="value=value.replace(/[^0-9\-]/g,'')" inputmode="numeric" minlength="8" maxlength="10">
+          </div>
+          <div class="d-none" id="calendar_date2">
+            <div class="title">
+              <button type="button" class="arrow-control" onclick="preMonth2();"><i
+                  class="fas fa-chevron-left"></i></button>
+              <h4 id="year-month2" class="year-month" onclick="showMonth2();"></h4>
+              <button type="button" class="arrow-control" onclick="nextMonth2();"><i
+                  class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="week" id="week2"></div>
+            <div class="list" id="list2"></div>
+          </div>
+          <div class="d-none" id="calendar_month2">
+            <div class="title">
+              <button class="arrow-control" onclick="preYear2();"><i class="fas fa-chevron-left"></i></button>
+              <h4 id="year2" class="year" onclick="showYear2();"></h4>
+              <button class="arrow-control" onclick="nextYear2();"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="list" id="monlist2"></div>
+          </div>
+          <div class="d-none" id="calendar_year2">
+            <div class="title">
+              <button class="arrow-control" onclick="preYears2();"><i class="fas fa-chevron-left"></i></button>
+              <h4 id="years2" class="year"></h4>
+              <button class="arrow-control" onclick="nextYears2();"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="list" id="yearlist2"></div>
+          </div>
+        </div>
+        <div class="input">
+          <span>Tour name</span>
+          <input type="text" placeholder="Tour name" spellcheck="false">
+        </div>
+        <div class="input">
+          <span>Number of travels</span>
+          <input type="number" placeholder="Number of travels" spellcheck="false">
+        </div>
+        <div class="input">
+          <span>Special request</span>
+          <textarea placeholder="Special request"></textarea>
+        </div>
+        <div class="input">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- End Contact -->
+
+  <!-- start footer -->
+  <footer>
+    <div class="box2 footer">
+      <div class="footerLogo">
+        <img src="../media/logo.png" alt="">
+        <div class="aboutText">
+          <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien in, hac ac tempus est velit scelerisque
+              diam.</p>
+          </article>
+        </div>
+        <div class="media2">
+          <a href="##"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="##"><i class="fa-brands fa-instagram"></i></a>
+          <a href="##"><i class="fa-brands fa-twitter"></i></a>
+          <a href="##"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footerLinkGroup">
+        <div class="linkGroup">
+          <h2>WHO WE ARE</h2>
+          <ul>
+            <li><a href="##">Link Content</a></li>
+            <li><a href="##">Link Content</a></li>
+            <li><a href="##">Link Content</a></li>
+            <li><a href="##">Link Content</a></li>
+            <li><a href="##">Link Content</a></li>
+          </ul>
+        </div>
+        <div class="linkGroup">
+          <h2>SUPPORT</h2>
+          <ul>
+            <li><a href="##">Link Content</a></li>
+            <li><a href="##">Link Content</a></li>
+            <li><a href="##">Link Content</a></li>
+            <li><a href="##">Link Content</a></li>
+            <li><a href="##">Link Content</a></li>
+          </ul>
+        </div>
+        <div class="linkGroup cont">
+          <h2>GET IN TOUCH</h2>
+          <a href="##" class="call">
+            <i class="fa-solid fa-phone"></i>
+            <div class="lets">
+              <p>LET'S TALK</p>
+              <span>(999) 888 777</span>
+            </div>
+          </a>
+          <a href="##" class="call">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="lets">
+              <p>SEND US A MESSAGE</p>
+              <span>mail@example.com</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copy">Copyright © 2024 Trial Guide, All rights reserved.</div>
+  <!-- end footer -->
+
+
+  <script src="../js/main.js"></script>
+  <script src="../js/date.js"></script>
+  <script src="../js/date2.js"></script>
+
+</body>
+
+</html>
