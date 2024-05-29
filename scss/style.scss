@@ -304,6 +304,7 @@ nav.color {
   }
   a {
     color: #fff;
+    text-transform: capitalize;
     .drop-icon {
       font-size: .6em;
       color: #fff;
@@ -2604,7 +2605,7 @@ input[type="date"]::-webkit-datetime-edit {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  object-position: center;
+  object-position: bottom;
 }
 
 .headerText {
